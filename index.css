@@ -9,16 +9,15 @@ html {
 }
 
 input{
-  display: none;
+ display: none;
 }
 
 img {
 	display: block;
-  max-width: 100%;
-  height: auto;
+	max-width: 50%;
+  height: 100%;
 	margin: 0 auto;
 }
-
 
 
 .wrapper {
@@ -30,11 +29,33 @@ img {
 .accordion__title {
 	display: block;
 	font-size: 24px;
+	padding: 10px 0;
+	border-top: 1px solid rgb(183, 183, 183);
 	font-weight: bold;
 	cursor: pointer;
 }
 
 .accordion__content {
+	max-height: 0;
+	overflow: hidden;
 	margin: 0 auto;
 	cursor: pointer;
+	transition: max-height 0.5s;
+
 }
+
+.accordion__content img {
+  max-height: 24px;
+	opacity: 0.5;
+  transition: 0.5s ease-in-out;
+}
+
+input:checked~.accordion__content {
+	max-height: 700px;
+}
+
+input:checked~.accordion__content img {
+	max-height: 700px;
+	opacity: 1;
+}
+
