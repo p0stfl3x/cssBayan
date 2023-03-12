@@ -49,19 +49,17 @@ img {
   transition: 0.5s ease-in-out;
 }
 
-input:checked~.accordion__content {
+input:checked~.accordion .accordion__content {
 	max-height: 700px;
 }
 
-input:checked~.accordion__content img {
+input:checked~.accordion .accordion__content img {
 	max-height: 700px;
 	opacity: 1;
 }
 
 .accordion:hover .accordion__content,
-.accordion:hover .accordion__content img,
-.accordion:active .accordion__content,
-.accordion:active .accordion__content img {
+.accordion:hover .accordion__content img {
 	max-height: 700px;
 	opacity: 1;
 }
