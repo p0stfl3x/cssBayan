@@ -8,6 +8,7 @@ html {
   font-family: sans-serif;
 }
 
+
 input{
  display: none;
 }
@@ -19,21 +20,64 @@ img {
 	margin: 0 auto;
 }
 
+h1 {
+	font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 820px) {
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+}
 
 .wrapper {
-	max-width: 1000px;
+	max-width: 63rem;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 2rem;
+}
+
+@media only screen and (min-width: 820px) {
+	.wrapper {
+		padding: 3rem;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.wrapper {
+		padding: 4rem;
+	}
+}
+
+.accordion {
+	color: rgb(0, 114, 222);
 }
 
 .accordion__title {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	padding-top: 0.6rem;
 	border-top: 0.05rem solid rgb(183, 183, 183);
 	font-weight: bold;
+}
+
+@media only screen and (min-width: 820px) {
+	.accordion__title {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.accordion__title {
+		font-size: 1.8rem;
+	}
 }
 
 .accordion__title:hover::after {
@@ -49,26 +93,31 @@ img {
 }
 
 .accordion__content img {
-  max-height: 24px;
+  max-height: 1.5rem;
 	padding-top: 0.6rem;
 	opacity: 0.5;
   transition: 0.5s ease-in-out;
 }
 
+input:checked~.accordion {
+	color: black;
+}
+
 input:checked~.accordion .accordion__content {
-	max-height: 700px;
+	max-height: 40rem;
 }
 
 input:checked~.accordion .accordion__content img {
-	max-height: 700px;
+	max-height: 40rem;
 	opacity: 1;
 }
 
-/* input:checked~.accordion .accordion__title::after {
-	font-family: "Font Awesome 5 Free"; content: "\f106";
-} */
 
 @media (hover: hover) {
+	.accordions:hover .accordion {
+		color: #000;
+	}
+
 	.accordions:hover .accordion__title::after {
 		font-family: "Font Awesome 5 Free"; content: "\f107";
 	}
@@ -87,7 +136,7 @@ input:checked~.accordion .accordion__content img {
 
 	.accordion:hover .accordion__content,
 	.accordion:hover .accordion__content img {
-		max-height: 700px;
+		max-height: 40rem;
 		opacity: 1;
 	}
 }
