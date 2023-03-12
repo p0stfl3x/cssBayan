@@ -41,7 +41,6 @@ img {
 	margin: 0 auto;
 	cursor: pointer;
 	transition: max-height 0.5s;
-
 }
 
 .accordion__content img {
@@ -55,6 +54,14 @@ input:checked~.accordion__content {
 }
 
 input:checked~.accordion__content img {
+	max-height: 700px;
+	opacity: 1;
+}
+
+.accordion:hover .accordion__content,
+.accordion:hover .accordion__content img,
+.accordion:active .accordion__content,
+.accordion:active .accordion__content img {
 	max-height: 700px;
 	opacity: 1;
 }
