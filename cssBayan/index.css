@@ -23,28 +23,34 @@ img {
 .wrapper {
 	max-width: 1000px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 4rem;
 }
 
 .accordion__title {
-	display: block;
-	font-size: 24px;
-	padding: 10px 0;
-	border-top: 1px solid rgb(183, 183, 183);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5rem;
+	padding-top: 0.6rem;
+	border-top: 0.05rem solid rgb(183, 183, 183);
 	font-weight: bold;
-	cursor: pointer;
+}
+
+.accordion__title:hover::after {
+	font-family: "Font Awesome 5 Free"; content: "\f107";
 }
 
 .accordion__content {
 	max-height: 0;
 	overflow: hidden;
 	margin: 0 auto;
-	cursor: pointer;
+	padding-bottom: 0.6rem;
 	transition: max-height 0.5s;
 }
 
 .accordion__content img {
   max-height: 24px;
+	padding-top: 0.6rem;
 	opacity: 0.5;
   transition: 0.5s ease-in-out;
 }
@@ -58,9 +64,30 @@ input:checked~.accordion .accordion__content img {
 	opacity: 1;
 }
 
-.accordion:hover .accordion__content,
-.accordion:hover .accordion__content img {
-	max-height: 700px;
-	opacity: 1;
-}
+/* input:checked~.accordion .accordion__title::after {
+	font-family: "Font Awesome 5 Free"; content: "\f106";
+} */
 
+@media (hover: hover) {
+	.accordions:hover .accordion__title::after {
+		font-family: "Font Awesome 5 Free"; content: "\f107";
+	}
+
+	.accordions:hover input:checked~.accordion .accordion__title::after {
+		font-family: "Font Awesome 5 Free"; content: "\f106";
+	}
+
+	.accordion:hover {
+		cursor: pointer;
+	}
+
+	.accordion:hover .accordion__title::after {
+		font-family: "Font Awesome 5 Free"; content: "\f106";
+	}
+
+	.accordion:hover .accordion__content,
+	.accordion:hover .accordion__content img {
+		max-height: 700px;
+		opacity: 1;
+	}
+}
