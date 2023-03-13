@@ -6,14 +6,8 @@
 
 html {
   font-family: sans-serif;
+	overflow-y: scroll;
 }
-
-a {
-	font-size: 1.2rem;
-	font-weight: bold;
-	line-height: 3;
-}
-
 
 input{
  display: none;
@@ -21,9 +15,21 @@ input{
 
 img {
 	display: block;
-	max-width: 50%;
+	max-width: 70%;
   height: 100%;
 	margin: 0 auto;
+}
+
+@media only screen and (min-width: 820px) {
+	img {
+		max-width: 60%;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	img {
+		max-width: 50%;
+	}
 }
 
 h1 {
@@ -45,12 +51,12 @@ h1 {
 .wrapper {
 	max-width: 63rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 @media only screen and (min-width: 820px) {
 	.wrapper {
-		padding: 3rem;
+		padding: 4rem 3rem;
 	}
 }
 
