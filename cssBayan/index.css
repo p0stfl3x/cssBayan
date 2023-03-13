@@ -8,6 +8,12 @@ html {
   font-family: sans-serif;
 }
 
+a {
+	font-size: 1.2rem;
+	font-weight: bold;
+	line-height: 3;
+}
+
 
 input{
  display: none;
