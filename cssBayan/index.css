@@ -92,10 +92,6 @@ h1 {
 	}
 }
 
-.accordion__title:hover::after {
-	font-family: "Font Awesome 5 Free"; content: "\f107";
-}
-
 .accordion__content {
 	max-height: 0;
 	overflow: hidden;
@@ -132,10 +128,11 @@ input:checked~.accordion .accordion__content img {
 
 	.accordions:hover .accordion__title::after {
 		font-family: "Font Awesome 5 Free"; content: "\f107";
+		transition: 0.5s;
 	}
 
 	.accordions:hover input:checked~.accordion .accordion__title::after {
-		font-family: "Font Awesome 5 Free"; content: "\f106";
+		transform: rotate(180deg);
 	}
 
 	.accordion:hover {
@@ -143,7 +140,7 @@ input:checked~.accordion .accordion__content img {
 	}
 
 	.accordion:hover .accordion__title::after {
-		font-family: "Font Awesome 5 Free"; content: "\f106";
+		transform: rotate(180deg);
 	}
 
 	.accordion:hover .accordion__content,
